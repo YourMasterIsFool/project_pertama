@@ -3,15 +3,18 @@ body {
   color:#161616;
 }
 
+h2 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
 header {
   background-color: white;
   position: fixed;
   z-index: 11;
+  height: 64px;
 }
-.shadow {
-  box-shadow: 0px 2px 2px 2px black;
-  transition: box-shadow 0.2s;
-}
+
 .brand {
   font-size: 32px;
 }
@@ -35,10 +38,34 @@ a {
   margin-right: 32px;
 }
 
+.section-hero-banner {
+  margin-bottom: 6.4rem;
+}
+
+.hero-image{
+  border-radius: 3%;
+} 
+
+.hero-cards {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin: 0;
+}
+
+.hero-cards > img {
+  display: block;
+  min-height: 100%;
+  width: auto;
+}
+
 .section-hero {
   margin-bottom: 6.4rem;
 }
 
+.hero-description {
+  padding-left: 76px;
+}
 .hero-description .title {
   font-weight: bold;
   margin-bottom: 12px;
@@ -53,21 +80,84 @@ a {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 800px){
+.c-information-intro {
+  margin-bottom: 40px;
+}
+
+.c-service .title {
+  font-weight:bold;
+  margin-bottom:1.5rem;
+  text-transform:capitalize;
+}
+.c-service .subtitle {
+  font-size:16px;
+  margin-bottom: 24px;
+}
+.c-service .c-menu {
+  width: 100%;
+  margin: 0px auto;
+  flex-direction: row;
+  padding: 16px 16px 24px;
+  min-height: 150px;
+}
+.card-images {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+.c-menu .c-card{
+  padding: 8px 16px 8px 16px;
+  margin-right: 20px;
+  border-radius: 16px;
+  border-width: 2px;
+  outline: none !important;
+  cursor: pointer;
+  transition: box-shadow 0.6s;
+}
+.c-card:hover {
+  box-shadow: 0px 4px 20px 1px #CACACA;
+}
+
+
+/*custom slick*/
+
+.slick-track {
+  padding:18px 12px;
+}
+
+
+
+
+/*custom responsive*/
+
+@media only screen and (max-width: 991px){
  .c-nav, .c-language {
   display: none;
  }
+
+  .hero-banner img {
+    margin-top:64px;
+  }
 
  .mobile-navigation {
   transition: display 0.6s;
   display: block;
  }
- .section-hero {
-  margin-bottom: 6rem;
- }
-
+ 
  .hero-description{
   margin-top: 2.5rem;
+  padding-left: 0;
  }
 
 }
+
+@media only screen and (max-width: 577px) {
+  .section-hero {
+    margin-bottom: 4rem;
+  }
+  .hero {
+    padding: 0 16px;
+  }
+}
+
+
